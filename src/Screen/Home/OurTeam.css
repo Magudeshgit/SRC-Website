@@ -1,0 +1,61 @@
+.ourteam{
+    position: relative;
+}
+.pattern_dot{
+    position: absolute;
+    right: -5%;
+    top: -10%;
+    z-index: -1;
+}
+.pattern_box{
+    position: absolute;
+    width: 15vw;
+}
+
+.ourteam .top{
+    text-align: center;
+}
+.ourteam .top h2, .underguidance h2{
+    text-align: center;
+    font-size: 60px;
+}
+.ourteam .top p{
+    color: #333232;
+    letter-spacing: 15px;
+}
+.firstperson{
+    text-align: center;
+}
+.secondset{
+    display: flex;
+    justify-content: space-around;
+}
+.secondset div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secondset h5, .secondset p{
+    text-align: center;
+}
+.secondset h5, .firstperson h5{
+    font-size: 15px;
+    margin-top: 5px;
+}
+.secondset p, .firstperson p{
+    font-size: 10px;
+}
+.underguidance .dean{
+    text-align: center;
+}
+@media only screen and (max-width:600px){
+    .ourteam .top h2, .underguidance h2{
+        font-size: 40px;
+    }
+    .ourteam .top p{
+        letter-spacing: 10px;
+    }
+    .pattern_dot{
+        display: none;
+    }
+}

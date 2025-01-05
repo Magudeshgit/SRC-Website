@@ -1,0 +1,59 @@
+.mission_vission{
+    padding: 50px;
+    transform: translateY(-15vh);
+}
+.mission_left p{
+    margin: 0;
+    font-weight: 200;
+}
+.mission_right{
+    color: #525151;
+}
+@media only screen and (max-width:600px){
+    .mission_vission{
+        padding: 30px;
+    }
+}
+.facilities h2{
+    text-align: center;
+    font-size: 60px;
+}
+.facilities_conatiner{
+    background-color: #F6F6F6;
+    border-radius: 46px;
+    z-index: 2;
+}
+.facilities_img{
+    width: 100%;
+    height: 100%;
+}
+.facilities_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.facilities_right p{
+    margin: 0;
+    color: #4F4F4F;
+}
+.facilities_right .secondP{
+    font-size: 18px;
+    text-wrap-style:balance;
+}
+.facilities_right .firstP{
+    font-size: 10px;
+    color: #7B7B7B;
+}
+.submit a{
+    text-decoration: none;
+    color: black;
+}
+.submit a:hover{
+    border-bottom: 2px solid black;
+}
+@media only screen and (max-width:600px){
+    .facilities h2{
+        font-size: 40px;
+    }
+}

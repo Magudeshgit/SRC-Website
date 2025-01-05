@@ -1,0 +1,125 @@
+.nav_head{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 2rem;
+    z-index: 1;
+    background-color: white;
+  }
+  .nav_head .nav_logo{
+    padding-top: 15px;
+    display: flex;
+  }
+  .nav_head div h3{
+    font-weight: 400;
+    font-size: 1.8vw;
+  }
+  .nav_head .nav_logo p{
+    font-size: 0.7vw;
+    margin: 0;
+    margin-top: 2%;
+  }
+  nav a{
+      margin: 0 2rem;
+      text-decoration: none;
+      font-size: 15px;
+      color: black;
+  }
+  nav a:hover{
+    color: #1E88E5;
+  }
+  .involved{
+    padding: 8px 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #1E88E5;
+    border: 2px solid #1E88E5;
+    cursor: pointer;
+  }
+  .involved:hover{
+    color: #1E88E5;
+    border: 2px solid #1E88E5;
+    background: transparent;
+    transition: background-color 0.3s ease;
+  }
+  .nav_head .nav-btn{
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+  }
+  .nav-cls-btn{
+    color: white;
+  }
+  .btn-log{
+    position: absolute;
+    right: 5%;
+    padding: 5ps;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  @media only screen and (min-width: 1024px){
+    .btn-hide-lg{
+      display: none;  
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .btn-hide{
+      display: none;
+    }
+    .nav_head .nav-btn{
+      visibility: visible;
+      opacity: 1;
+    }
+    .nav_head nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: white;
+      color: white;
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+    .nav_head .responsive_nav{
+      transform: none;
+    }
+    nav .nav-cls-btn{
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: black;
+    }
+    nav a{
+      font-size: 20px;
+    }
+  }
+  @media only screen and (max-width: 700px){
+    .nav_head div h3{
+      font-size: 20px;
+    }
+    .nav_head .nav_logo p{
+        font-size: 7px;
+    }
+  }
+  
+  
+  
