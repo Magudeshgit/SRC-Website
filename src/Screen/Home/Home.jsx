@@ -6,6 +6,9 @@ import "./Mission_vission.css"
 import "./OurTeam.css"
 import "./Footter.css"
 import "./Animation.css"
+
+import { Navbar } from '../../Components/Nav bar/Navbar';
+
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import { FaArrowRight, FaStar } from 'react-icons/fa';
@@ -14,57 +17,73 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { IoLocationOutline } from 'react-icons/io5';
 
 export const Home = () => {
-    const [homeRightImage, setHomeRightImage] = useState("home_right_image.svg")
     const [countTrigger, setCountTrigger] = useState(false)
+    window.addEventListener('scroll', ()=>{
+        const element = document.querySelector('.nav_head')
+        if (window.scrollY > 20)
+        {
+            (!element.classList.contains('active'))?element.classList.add('active'):null
+        }
+        else
+        {
+            (element.classList.contains('active'))?element.classList.remove('active'):null
+        }
+    })
   return (
     <>
+    <Navbar/>
     <div className="home">
-        
+        {/* Blob */}
+        <img src="heroblob.svg" alt="" className='heroblob' />
         <div className="home_container row">
             <div className="home_left col-xl-6 col-lg-6 col-xxl-6 col-md-6 col-12  slide-in-tl-norma">
                 <h3>Empowering Students Through Education and Innovation</h3>
                 <p>Join us in our mission to upskill students and create a brighter future for all.</p>
-                <div className="home_left_buttons row">
-                    <button className='learnmore col-md-12 col-xxl-5 col-xl-5 col-sm-12 col-xs-12'>Learn more</button>
-                    <button className='viewfacilities col-md-12 col-xxl-5 col-xl-5 col-sm-12 col-xs-12'>View Facilities</button>
+                <div className="home_left_buttons">
+                    <button className='learnmore'>Learn more</button>
+                    <button className='viewfacilities'>View Facillities</button>
                 </div>
             </div>
             <div className="home_right col-xl-6 col-lg-6 col-xxl-6 col-md-6 col-12">
-                <img src={homeRightImage} alt="hi" className='img-fluid' />
+                <img src="home_right_image.png" alt="hi" className='img-fluid' />
             </div>
-        </div>
-        <div className="box_image row ">
-            <img src="Box.svg" alt="" className='linear_opacity img-fluid col-md-2 col-xl-2 col-xxl-2 col-3' />
         </div>
         
         {/* Unwilling our vision and  mission */}
         <ScrollTrigger onEnter={()=> setCountTrigger(true)} onExit={()=> setCountTrigger(false)} >
         <div className="unwilling mb-5 linear_opacity ">
-            <div className='heading mb-5 '>
-                <h2>Unwilling our</h2>
-                <h2>mission and vission</h2>
+            <div className="box_image">
+            <img src="Box.svg" alt="" className='linear_opacity img-fluid' />
             </div>
-            <div className="row main_container">
-                <div className="col-12 col-md-8 col-xxl-8 col-xl-8 col-lg-8">
-                    <div className="row mt-sm-3">
-                        <img src="unwilling image.svg" alt="" className='img-fluid umwilling_image' />
+            <div className='heading mb-5 '>
+                <h2>Unveiling our</h2>
+                <h2>mission and vision</h2>
+            </div>
+            <div className="row umain_container grid container-fluid w-100">
+                {/* <div className="bentopar"> */}
+                <div className="col-8 row-">
+                    <div className="row">
+                        <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
                     </div>
-                    <div className="row down_box_container  ">
-                        <div className=" down_image_box" style={{backgroundColor:"#77C6FF"}} >
-                            <div className="content">
-                                <h1> 
-                                { countTrigger &&
-                                    <CountUp   start={0}
-                                    end={5}
-                                    duration={5.75}
-                                    >
-                                    </CountUp>}+
-                                </h1>
-                                <h4>Successful technical events.</h4>
-                                <p>Starting from AY 2023</p>
-                            </div>
+                    <div className="row mt-4">
+                    <div className="col-6">
+                        <div className="down_image_box" style={{backgroundColor:"#77C6FF"}} >
+                        <div className="content">
+                            <h1> 
+                            { countTrigger &&
+                                <CountUp   start={0}
+                                end={5}
+                                duration={5.75}
+                                >
+                                </CountUp>}+
+                            </h1>
+                            <h4>Successful technical events.</h4>
+                            <p>Starting from AY 2023</p>
                         </div>
-                        <div className=" down_image_box" style={{backgroundColor:"#FF5894"}}>
+                        </div>
+                    </div>
+                    <div className="col-6">
+                        <div className="down_image_box" style={{backgroundColor:"#FF5894"}}>
                             <div className="content">
                                 <h1>{ countTrigger &&
                                     <CountUp   start={0}
@@ -77,30 +96,32 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 unwilling_right_box mt-sm-3">
-                    <div className="right_box_count row">
-                        <div className="right_box_count_up col-xxl-12 col-lg-12 col-md-12 col-xs-6 col-5">
-                            <h1>{ countTrigger &&
-                                    <CountUp   start={0}
-                                    end={40}
-                                    duration={5.75}
-                                    >
-                                    </CountUp>}+</h1>
-                            <h4>Students project has been funded for patent</h4>
-                        </div>
-                        <hr className='col-xxl-12 col-lg-12 col-md-12 col-xs-6 col-2' />
-                        <div className="right_box_count_down col-xxl-12 col-lg-12 col-md-12 col-xs-6 col-5">
-                            <h1>{ countTrigger &&
-                                    <CountUp   start={0}
-                                    end={75}
-                                    duration={5.75}
-                                    >
-                                    </CountUp>}+</h1>
-                            <h4>Spent for patent and development</h4>
-                        </div>
                     </div>
                 </div>
+
+                <div className='col-4'>
+                    <div className="grbox h-100 ">
+                            <div className="right_box_count">
+                                <h1>{ countTrigger &&
+                                        <CountUp   start={0}
+                                        end={40}
+                                        duration={5.75}
+                                        >
+                                        </CountUp>}+</h1>
+                                <h4>Students project has been funded for patent</h4>
+                            </div>
+                            <div class="hrline"></div>
+                            <div className="right_box_count">
+                                <h1>{ countTrigger &&
+                                        <CountUp   start={0}
+                                        end={75}
+                                        duration={5.75}
+                                        >
+                                        </CountUp>}+</h1>
+                                <h4>Spent for patent and development</h4>
+                            </div>
+                    </div>  
+                    </div>
             </div>
         </div>
         </ScrollTrigger>
@@ -129,7 +150,7 @@ export const Home = () => {
             <div className="row mt-5">
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
                     <div className=' mission_left'>
-                        <p>Our vission</p>
+                        <p>Our vision</p>
                         <h1>Leading the Young Minds</h1>
                     </div>
                 </div>
@@ -191,7 +212,7 @@ export const Home = () => {
 
 
             {/* Our Team */}
-            <div className="ourteam mt-5">
+            {/* <div className="ourteam mt-5">
                 <div className="pattern_dot">
                     <img src="pattern_dot.svg" alt="" className='img-fluid' />  
                 </div>
@@ -292,7 +313,7 @@ export const Home = () => {
                         Dr.Mahalingam College of Engineering and Technology</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
         
         {/* About SRC */}
@@ -335,7 +356,7 @@ export const Home = () => {
                     <div>
                         <a href="#">
                             <button>Learn More</button>
-                        </a>
+                        </a>    
                     </div>
                 </div>
                 <div className="col">

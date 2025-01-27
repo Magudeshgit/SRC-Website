@@ -1,3 +1,13 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  font-family: "Poppins";
+}
 .nav_head{
     position: fixed;
     width: 100%;
@@ -6,10 +16,19 @@
     height: 70px;
     padding: 0 2rem;
     z-index: 1;
-    background-color: white;
+    transition: .5s;
+  }
+.nav_head.active
+{
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px)
+}
+  nav
+  {
+    display: flex;
+    align-items: center;
   }
   .nav_head .nav_logo{
-    padding-top: 15px;
     display: flex;
   }
   .nav_head div h3{
@@ -22,10 +41,11 @@
     margin-top: 2%;
   }
   nav a{
-      margin: 0 2rem;
+      margin: 0 1rem;
       text-decoration: none;
       font-size: 15px;
-      color: black;
+      font-family: "Poppins";
+      color: rgb(66, 66, 66);
   }
   nav a:hover{
     color: #1E88E5;
@@ -53,6 +73,7 @@
     background: transparent;
     border: none;
     outline: none;
+    display: none;
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
@@ -81,6 +102,7 @@
     }
     .nav_head .nav-btn{
       visibility: visible;
+      display: block;
       opacity: 1;
     }
     .nav_head nav{

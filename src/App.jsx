@@ -8,14 +8,9 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 function App() {
 
   return (
-  //  <>
-  //  <Navbar/>
-  //  <Home/>
-  //  {/* <Create_account/> */}
-  //  </>
   <BrowserRouter>
     <Routes>
-      <Route index element={<><Navbar/><Home/></>}></Route>
+      <Route index element={<><Home/></>}></Route>
       <Route path='createaccount/' element={<Create_account/>}/>
     </Routes>
   </BrowserRouter>

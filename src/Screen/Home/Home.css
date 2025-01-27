@@ -1,9 +1,13 @@
+html
+{
+    font-size: 10px;
+}
 .home{
-    position: absolute;
-    top: 10%;
-    width: 100%;
-    min-height: 100vh;
+
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .home_container{
     padding: 50px;
@@ -14,60 +18,104 @@
     margin-top: 5%;
 }
 .home_left h3{
-    font-size: 70px;
+    font-size: 4em;
+    font-family: "Poppins";
+
 }
 .home_left p{
     color: #525151;
+    font-family: "Poppins";
+    font-size: 1.6em;
     margin-bottom: 15px;
 }
 .home_left_buttons{
    width: 100%;
+   display: flex;
+   gap: 1.5em;
+   margin-top: 10px;
 }
 .home_left_buttons button{
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 20px;
-    padding: 1vh 4vw;
-    border-radius: 8px;
+    font-family: "Poppins";
+    font-size: 1.2em;
+    padding: 7px 45px;
+    border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 .learnmore{
     border: none;
     outline: none;
     background-color: #1E88E5;
-    border: 2px solid #1E88E5;
     color: white;
 }
 .viewfacilities{
     background: transparent;
-    border: 2px solid #525151;
+    border: 1.25px solid #525151;
     color: #525151;
 }
 .learnmore:hover{
-    color: #1E88E5;
-    border: 2px solid #1E88E5;
-    background: transparent;
+    background: #1169b6;
     transition: background-color 0.3s ease;
   }
-.home_right image{
-    width: 100%;
- }
-/* .home .box_image{
-    transform: translateY(-50%);
-}  */
+.viewfacilities:hover{
+background: #1f1f1f;
+color: white;
+transition: background-color 0.3s ease;
+}
+.home_right
+{
+    margin-top: 5em;
+    display: flex;
+    justify-content: flex-end;
 
+}
+.home_right img{
+    max-width: 500px;
+ }
+.box_image{
+    position: absolute;
+    z-index: -2;
+} 
+
+
+/* Blob */
+.heroblob
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    max-width: 50%;
+}
+.unwilling
+{
+    position: relative;
+}
 @media only screen and (max-width:600px){
     .home_container{
         padding: 30px;
     }
+    .home_left
+    {
+        margin-top: 17.5%;
+    }
     .home_left h3{
         font-size: 45px;
     }
-    .home_left_buttons button{
-        padding: 1vh 3vw;
+    .home_left_buttons{
+        width: 100%;
     }
     .home_right img{
         margin-top: 30px;
+        max-width: 100%;
+    }
+    .heroblob
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+        max-width: 75%;
     }
 }
 /* @media only screen and (min-width:600px) and ( max-width:768px){
