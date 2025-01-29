@@ -48,6 +48,45 @@ export const Home = () => {
                 <img src="home_right_image.png" alt="hi" className='img-fluid' />
             </div>
         </div>
+
+        {/* Spotlight */}
+        <div className='p-[50px]'>
+            <div className="">
+                <p className="text-xl tracking-[.5em] font-[Poppins]">SPOTLIGHT</p>
+            </div>
+            <div className='rounded-3xl border-1 border-black p-4 max-h-[450px]'>
+                <div className="swiper">
+                    <div className="swiper-wrapper">
+
+                        <div className="swiper-slide">
+                            <div className="swiper-material-wrapper">
+                                <div className="swiper-material-content">
+                                <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="swiper-slide">
+                            <div className="swiper-material-wrapper">
+                                <div className="swiper-material-content">
+                                <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="swiper-slide">
+                            <div className="swiper-material-wrapper">
+                                <div className="swiper-material-content">
+                                <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
         
         {/* Unwilling our vision and  mission */}
         <ScrollTrigger onEnter={()=> setCountTrigger(true)} onExit={()=> setCountTrigger(false)} >
@@ -132,7 +171,7 @@ export const Home = () => {
             {/* mission */}
             <div className="row">
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
-                    <div className=' mission_left'>
+                    <div className='mission_left'>
                         <p>Our mision</p>
                         <h1>Innovation & Creativity</h1>
                     </div>

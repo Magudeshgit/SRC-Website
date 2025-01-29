@@ -1,13 +1,19 @@
 .mission_vission{
     padding: 50px;
-    transform: translateY(-15vh);
+}
+.mission_left h1{
+    font-family: "Poppins";
 }
 .mission_left p{
     margin: 0;
     font-weight: 200;
+    font-family: "Poppins";
 }
-.mission_right{
+.mission_right>p{
     color: #525151;
+    font-family: "Poppins";
+    font-size: 1.2em;
+    font-weight: 300;
 }
 @media only screen and (max-width:600px){
     .mission_vission{

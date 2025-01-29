@@ -1,6 +1,6 @@
 .unwilling {
     width: 100%;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     position: relative;
     margin-top: 25px;
 }
@@ -17,6 +17,7 @@
 }
 .unwilling .heading h2{
     font-size: 60px;
+    font-family: "Poppins";
 }
 .down_box_container{
     padding-right: 16px;
