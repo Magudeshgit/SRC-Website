@@ -30,7 +30,7 @@ export const Home = () => {
         }
     })
   return (
-    <>
+    <div className='parent'>
     <Navbar/>
     <div className="home">
         {/* Blob */}
@@ -90,22 +90,22 @@ export const Home = () => {
         
         {/* Unwilling our vision and  mission */}
         <ScrollTrigger onEnter={()=> setCountTrigger(true)} onExit={()=> setCountTrigger(false)} >
-        <div className="unwilling mb-5 linear_opacity ">
+        <div className="unwilling linear_opacity ">
             <div className="box_image">
             <img src="Box.svg" alt="" className='linear_opacity img-fluid' />
             </div>
             <div className='heading mb-5 '>
                 <h2>Unveiling our</h2>
-                <h2>mission and vision</h2>
+                <h2>mission and vision</h2> 
             </div>
             <div className="row umain_container grid container-fluid w-100">
                 {/* <div className="bentopar"> */}
-                <div className="col-8 row-">
+                <div className="col-sm-12 col-md-8">
                     <div className="row">
                         <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
                     </div>
                     <div className="row mt-4">
-                    <div className="col-6">
+                    <div className="col-sm-12 col-md-6">
                         <div className="down_image_box" style={{backgroundColor:"#77C6FF"}} >
                         <div className="content">
                             <h1> 
@@ -121,7 +121,7 @@ export const Home = () => {
                         </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-sm-12 col-md-6 dm-wrap">
                         <div className="down_image_box" style={{backgroundColor:"#FF5894"}}>
                             <div className="content">
                                 <h1>{ countTrigger &&
@@ -138,7 +138,7 @@ export const Home = () => {
                     </div>
                 </div>
 
-                <div className='col-4'>
+                <div className='row-sm col-md-4 mt-sm-4 g-4 '>
                     <div className="grbox h-100 ">
                             <div className="right_box_count">
                                 <h1>{ countTrigger &&
@@ -172,12 +172,12 @@ export const Home = () => {
             <div className="row">
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
                     <div className='mission_left'>
-                        <p>Our mision</p>
+                        <p>OUR MISSION</p>
                         <h1>Innovation & Creativity</h1>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
-                    <div className=' mission_right'>
+                    <div className='mission_right'>
                         <p>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With an unwavering dedication to excellence, we empower our students to explore the frontiers of knowledge, push boundaries, and create solutions that address the pressing challenges of our time. </p>
                         <p>Together, we strive to cultivate an environment where curiosity thrives, diversity is celebrated, and ideas flourish, inspiring the next generation of leaders and change-makers to make a meaningful difference in the world.</p>
                     </div>
@@ -425,6 +425,6 @@ export const Home = () => {
     </div>
     
     
-    </>
+    </div>
   )
 }

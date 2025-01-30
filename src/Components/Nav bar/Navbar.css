@@ -9,12 +9,13 @@ body
   font-family: "Poppins";
 }
 .nav_head{
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 70px;
-    padding: 0 2rem;
+    padding: 0 23px;
     z-index: 1;
     transition: .5s;
   }

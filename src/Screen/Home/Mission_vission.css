@@ -7,6 +7,9 @@
 .mission_left p{
     margin: 0;
     font-weight: 200;
+    font-size: 1.3em;
+    margin-bottom: .5em;
+    text-transform: uppercase;
     font-family: "Poppins";
 }
 .mission_right>p{
@@ -17,7 +20,7 @@
 }
 @media only screen and (max-width:600px){
     .mission_vission{
-        padding: 30px;
+        padding: 23px;
     }
 }
 .facilities h2{

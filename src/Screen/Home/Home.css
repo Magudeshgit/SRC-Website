@@ -3,12 +3,21 @@ html
 {
     font-size: 10px;
 }
+.parent
+{
+    position: relative;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .home{
 
     overflow: hidden;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
 .home_container{
     padding: 50px;
@@ -92,9 +101,10 @@ transition: background-color 0.3s ease;
 {
     position: relative;
 }
+
 @media only screen and (max-width:600px){
     .home_container{
-        padding: 30px;
+        padding: 23px;
     }
     .home_left
     {
@@ -105,7 +115,12 @@ transition: background-color 0.3s ease;
     }
     .home_left_buttons{
         width: 100%;
+        flex-wrap: wrap;
     }
+    .dm-wrap
+{
+    margin-top: 20px;
+}
     .home_right img{
         margin-top: 30px;
         max-width: 100%;

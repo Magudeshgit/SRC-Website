@@ -3,15 +3,16 @@
     /* max-height: 100vh; */
     position: relative;
     margin-top: 25px;
+    /* padding: 50px; */
 }
 
 .umain_container
 {
-    padding: 0 50px;
-    max-width: 100%;
+min-width: 100%;
     max-height: 100%;
+    font-family: "Poppins";
 }
-.unwilling .heading{
+.unwilling > .heading{
     width: 100%;    
     text-align: center;
 }
@@ -25,11 +26,14 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .down_image_box{
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 50px;
-    border-radius: 32px;
+    border-radius: 20px;
     width: 100%;
     height: 100%;
 }
@@ -58,24 +62,34 @@
 .grbox
 {
     background-color: #87FF93;
-    border-radius: 32px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly !important;
     padding: 5em;
+    gap: 2em;
 }
 
 
 @media only screen and (max-width:600px){
-    .unwilling{
+    /* .unwilling{
         padding-left: 30px;
         padding-right: 30px;
+    } */
+     .umain_container
+     {
+        padding: 23px !important;
+        margin: 0;
+     }
+     .unwilling > .heading
+     {
+        padding: 23px;
+     }
+    .unwilling > .heading > h2{
+        font-size: 35px;
     }
-    .unwilling .heading h2{
-        font-size: 40px;
-    }
-    .down_image_box{
-        padding: 20px;
+    .down_image_box, .grbox{
+        padding: 30px;
     }
     .down_image_box .content h1{ 
         font-size: 8vw;
@@ -93,6 +107,6 @@
         font-size: 8vw;
     }
     .right_box_count h4{
-        font-size:medium;
+        font-size: medium;
     }
 }
