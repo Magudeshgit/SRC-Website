@@ -175,14 +175,8 @@ transition: background-color 0.3s ease;
     transition: 1s;
     transform: scale(1.5)
 } */
-/* .swiper-slide-active
-{
-    width: 70% !important;
-}
-.swiper-slide-next
-{
-    width: 20% !important;
-} */
+
+
 @media only screen and (max-width:600px){
     .carou-wrap, .spot-head
     {

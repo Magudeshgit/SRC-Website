@@ -19,10 +19,17 @@ import { IoLocationOutline } from 'react-icons/io5';
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 export const Home = () => {
     const [countTrigger, setCountTrigger] = useState(false)
+    const [slideinfo, setslideinfo] = useState({
+        activeslide: null,
+        nextslide: null,
+        allslide: null
+    })
+    // let activeslide, nextslide, allslide;
+    // console.log(document.querySelectorAll('.swiper-slide')[0])
     window.addEventListener('scroll', ()=>{
         const element = document.querySelector('.nav_head')
         if (window.scrollY > 20)
@@ -62,55 +69,85 @@ export const Home = () => {
 
         {/* Spotlight */}
         <div className=''>
-            <div className="spot-head flex flex-wrap">
-                <div className='flex flex-col'>
-                    <p className="text-4xl tracking-[.5em] mb-1 font-semibold font-[Poppins]">SPOTLIGHT & BEYOND</p>
-                    <p className='font-[Poppins] text-xl text-gray-600'>
-                    Highlighting exceptional students, impactful events, and unforgettable moments that shape our vibrant community.
+            <div className="spot-head flex items-center">
+
+                <div className='flex flex-col max-w-[75%] text-left'>
+                    <p className="text-3xl tracking-[.5em] mb-1 font-semibold font-[Poppins]">
+                        SPOTLIGHT &
+                        BEYOND
                     </p>
+                    {/* <p className='font-[Poppins] text-xl text-gray-600'>
+                    Highlighting exceptional students, impactful events.
+                    </p> */}
                 </div>
-                <button className='viewmore'>
-                    View more
-                    <img src="chevron-forward-outline.svg" alt=""/>
-                </button>
+        
+                <div className='flex gap-3 max-w-25%]'>
+                    <button className='swiper-button-prev border-none outline-none flex hover:-translate-x-1.5 transition'>
+                        <img src="chevron-forward-outline black.svg" className='rotate-180 w-[60px]'/>
+                    </button>
+                    <button className='swiper-button-next border-none outline-none flex hover:translate-x-1.5 transition'>
+                        <img src="chevron-forward-outline black.svg" className='w-[60px]'/>
+                    </button>
+                </div>
             </div>
             <div className='carou-wrap'>
             <div className='rounded-xl border-1 border-black p-4 max-h-[450px] spot-main'>
 
             <Swiper
-                slidesPerView={3}
+                slidesPerView={1}
                 spaceBetween={"15px"}
-                watchSlidesProgress={true}
-                // slidec
+                navigation= {{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  }}
+                breakpoints={
+                    {640: {
+                        slidesPerView: 1.2,
+                    }}
+                }
+                // onInit={(e)=>{
+                //     console.log("POPOP", e.activeIndex)
+                //     setslideinfo({
+                //         activeslide:  document.querySelectorAll('.swiper-slide')[e.activeIndex - 1],
+                //         nextslide: document.querySelector('.swiper-slide')[e.activeIndex],
+                //         allslide: document.querySelectorAll('.swiper-slide')
+                //     })
+                // }}
                 // onSlideChange={(e)=>{
-                //     console.log(e)
-                // }}
-                // setTranslate = {}
-                scr
-                onProgress={(e)=>{
-                    // const curr = document.querySelector('.swiper-slide-active')
-                    console.log(e.realIndex, e.activeIndex)
-                    // const slide = document.querySelectorAll('.swiper-slide')
-                    // slide[e.realIndex].childNodes[0].childNodes[0].style.transform = `scale(${1 + e.progress})`
-
-                    // slide[e.activeIndex + 1].childNodes[0].childNodes[0].style.transform = `scale(${1 + e.progress})`
-
-
-
-                }}
-
-                // onActiveIndexChange={(e)=>{
-                //     const postnext = document.querySelectorAll('.swiper-slide')[e.activeIndex + 2]
-                //     postnext.style.width = "10%"
-                // }}
-                loop={true}
-                // autoplay={
-                //     {
-                //         delay: 2500,
-                //         disableOnInteraction: true
+                //     const test = {
+                //         allslide: slideinfo.allslide,
+                //         activeslide: slideinfo.nextslide,
+                //         nextslide: slideinfo.allslide[e.realIndex + 1],
                 //     }
-                // }
-                modules={[Autoplay]}
+                //     console.log(test)
+                //     setslideinfo(test)
+                //     console.log('lklkl', slideinfo)
+                //     // activeslide =  allslide[e.activeIndex]
+                //     // nextslide = allslide[e.activeIndex + 1]
+                //     // console.log(activeslide, nextslide, allslide)    
+                // }}
+                // onProgress={(e)=>{
+                //     if (slideinfo.activeslide)
+                //     {
+                //         const tp = slideinfo.activeslide || document.querySelector('.swiper-slide-active')
+                //         // console.log("CHECk2", tp, (1 + (e.progress * 0.2)))
+                //         tp.childNodes[0].childNodes[0].style.transform = `scale(${1 + e.progress})`
+                //     }
+                //     // if (e.progress == 1)
+                //     // {
+                        
+                //     // }
+                // }}
+
+                loop={true}
+                autoplay={
+                    {
+                        delay: 3000,
+                        speed: 1000,
+                        disableOnInteraction: true
+                    }
+                }
+                modules={[Autoplay, Navigation]}
             >
                 <SwiperSlide>
                     <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
@@ -224,9 +261,14 @@ export const Home = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
-
+            
+            <button className='viewmore w-full border-none outline-none bg-[#1169b6] justify-center text-white text-2xl py-2 flex mt-4'>
+                    View more
+                    <img src="chevron-forward-outline.svg" className='w-4'/>
+            </button>
             </div>
             </div>
+              
             </div>
         
         
