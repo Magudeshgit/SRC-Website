@@ -15,7 +15,7 @@ body
     display: flex;
     justify-content: space-between;
     height: 70px;
-    padding: 0 23px;
+    padding: 0 50px;
     z-index: 1;
     transition: .5s;
   }
@@ -36,20 +36,16 @@ body
     font-weight: 400;
     font-size: 1.8vw;
   }
-  .nav_head .nav_logo p{
-    font-size: 0.7vw;
-    margin: 0;
-    margin-top: 2%;
-  }
   nav a{
       margin: 0 1rem;
       text-decoration: none;
       font-size: 15px;
       font-family: "Poppins";
-      color: rgb(66, 66, 66);
+      color: rgb(84, 84, 84);
+      transition: .5s;
   }
   nav a:hover{
-    color: #1E88E5;
+    color: #000000;
   }
   .involved{
     padding: 8px 20px;
@@ -75,9 +71,20 @@ body
     border: none;
     outline: none;
     display: none;
-    visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+    z-index: 5;
+  }
+  .nav-btn > div
+  {
+    height: 1.2px;
+    border-radius: 10px;
+    width: 50px;
+    background: black;
+    transition: .5s;
   }
   .nav-cls-btn{
     color: white;
@@ -85,12 +92,28 @@ body
   .btn-log{
     position: absolute;
     right: 5%;
-    padding: 5ps;
+    padding: 5px;
     cursor: pointer;
     background: transparent;
     border: none;
     outline: none;
   }
+
+  /* Hambar Animations */
+  .hambar:nth-child(1).active
+  {
+    transform: rotate(45deg);
+  }
+  
+  .hambar:nth-child(2).active
+  {
+    display: none;
+  }
+  .hambar:nth-child(3).active
+  {
+    transform: rotate(-45deg) translate(5px, -6.5px);
+  }
+
   @media only screen and (min-width: 1024px){
     .btn-hide-lg{
       display: none;  
@@ -102,13 +125,12 @@ body
       display: none;
     }
     .nav_head .nav-btn{
-      visibility: visible;
-      display: block;
+      display: flex;
       opacity: 1;
     }
     .nav_head nav{
       position: fixed;
-      top: 0;
+      top: -100vh;
       left: 0;
       width: 100%;
       height: 100%;
@@ -120,10 +142,11 @@ body
       background-color: white;
       color: white;
       transition: 1s;
-      transform: translateY(-100vh);
+      /* transform: translateY(-100vh); */
     }
-    .nav_head .responsive_nav{
-      transform: none;
+    .nav_head > .responsive_nav{
+      height: 100vh;
+      top: 0;
     }
     nav .nav-cls-btn{
       position: absolute;
@@ -138,6 +161,10 @@ body
   @media only screen and (max-width: 700px){
     .nav_head div h3{
       font-size: 20px;
+    }
+    .nav_head
+    {
+      padding: 0 23px;
     }
     .nav_head .nav_logo p{
         font-size: 7px;

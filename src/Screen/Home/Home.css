@@ -50,6 +50,10 @@ html
     padding: 7px 45px;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;;
     width: 100%;
 }
 .learnmore{
@@ -87,7 +91,6 @@ transition: background-color 0.3s ease;
     z-index: -2;
 } 
 
-
 /* Blob */
 .heroblob
 {
@@ -101,10 +104,96 @@ transition: background-color 0.3s ease;
 {
     position: relative;
 }
+/* ---- */
+.home_left_buttons > button > img, .viewmore>img
+{
+    width: 13px;
+}
+.ivt-clr
+{
+    filter: invert(1);
+}
 
+/* SPOTLIGHT */
+.viewmore
+{
+    border: none;
+    outline: none;
+    background-color: #1E88E5;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-family: "Poppins";
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+.viewmore:hover{
+    background: #1169b6;
+    transition: background-color 0.3s ease;
+}
+.spot-head
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+.spot-head > p
+{
+    margin-bottom: 0 !important;
+}
+.spot-main
+{
+    padding: 20px 50px;
+}
+
+.carou-wrap
+{
+    padding: 0 50px;
+}
+
+.spotimg-overlay::after
+{
+    content: '';
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0));  
+}
+/* .swiper-slide
+{
+    transition: .5s ease-in !important;
+} */
+/* .swiper-slide-prev > .spotimg-overlay > img
+{
+    transition: 1s;
+    transform: scale(1.5)
+} */
+/* .swiper-slide-active
+{
+    width: 70% !important;
+}
+.swiper-slide-next
+{
+    width: 20% !important;
+} */
 @media only screen and (max-width:600px){
+    .carou-wrap, .spot-head
+    {
+        padding: 10px 23px;
+    }
+    .spot-head
+    {
+        text-align: center;
+    }
     .home_container{
-        padding: 23px;
+        padding: 22.5px;
     }
     .home_left
     {

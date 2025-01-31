@@ -6,6 +6,7 @@ import "./Mission_vission.css"
 import "./OurTeam.css"
 import "./Footter.css"
 import "./Animation.css"
+import "swiper/css"
 
 import { Navbar } from '../../Components/Nav bar/Navbar';
 
@@ -15,6 +16,10 @@ import { FaArrowRight, FaStar } from 'react-icons/fa';
 import { FiPhone } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
 import { IoLocationOutline } from 'react-icons/io5';
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 export const Home = () => {
     const [countTrigger, setCountTrigger] = useState(false)
@@ -40,8 +45,14 @@ export const Home = () => {
                 <h3>Empowering Students Through Education and Innovation</h3>
                 <p>Join us in our mission to upskill students and create a brighter future for all.</p>
                 <div className="home_left_buttons">
-                    <button className='learnmore'>Learn more</button>
-                    <button className='viewfacilities'>View Facillities</button>
+                    <button className='learnmore'>
+                        Learn more
+                        <img src="chevron-forward-outline.svg" alt="" />
+                    </button>
+                    <button className='viewfacilities'>
+                        View Facillities
+                        <img src="color-filter-outline.svg" alt="" />
+                    </button>
                 </div>
             </div>
             <div className="home_right col-xl-6 col-lg-6 col-xxl-6 col-md-6 col-12">
@@ -50,43 +61,174 @@ export const Home = () => {
         </div>
 
         {/* Spotlight */}
-        <div className='p-[50px]'>
-            <div className="">
-                <p className="text-xl tracking-[.5em] font-[Poppins]">SPOTLIGHT</p>
-            </div>
-            <div className='rounded-3xl border-1 border-black p-4 max-h-[450px]'>
-                <div className="swiper">
-                    <div className="swiper-wrapper">
-
-                        <div className="swiper-slide">
-                            <div className="swiper-material-wrapper">
-                                <div className="swiper-material-content">
-                                <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="swiper-slide">
-                            <div className="swiper-material-wrapper">
-                                <div className="swiper-material-content">
-                                <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="swiper-slide">
-                            <div className="swiper-material-wrapper">
-                                <div className="swiper-material-content">
-                                <img src="unwilling image.svg" alt="" className='w-100 umwilling_image' />
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
+        <div className=''>
+            <div className="spot-head flex flex-wrap">
+                <div className='flex flex-col'>
+                    <p className="text-4xl tracking-[.5em] mb-1 font-semibold font-[Poppins]">SPOTLIGHT & BEYOND</p>
+                    <p className='font-[Poppins] text-xl text-gray-600'>
+                    Highlighting exceptional students, impactful events, and unforgettable moments that shape our vibrant community.
+                    </p>
                 </div>
+                <button className='viewmore'>
+                    View more
+                    <img src="chevron-forward-outline.svg" alt=""/>
+                </button>
             </div>
-        </div>
+            <div className='carou-wrap'>
+            <div className='rounded-xl border-1 border-black p-4 max-h-[450px] spot-main'>
+
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={"15px"}
+                watchSlidesProgress={true}
+                // slidec
+                // onSlideChange={(e)=>{
+                //     console.log(e)
+                // }}
+                // setTranslate = {}
+                scr
+                onProgress={(e)=>{
+                    // const curr = document.querySelector('.swiper-slide-active')
+                    console.log(e.realIndex, e.activeIndex)
+                    // const slide = document.querySelectorAll('.swiper-slide')
+                    // slide[e.realIndex].childNodes[0].childNodes[0].style.transform = `scale(${1 + e.progress})`
+
+                    // slide[e.activeIndex + 1].childNodes[0].childNodes[0].style.transform = `scale(${1 + e.progress})`
+
+
+
+                }}
+
+                // onActiveIndexChange={(e)=>{
+                //     const postnext = document.querySelectorAll('.swiper-slide')[e.activeIndex + 2]
+                //     postnext.style.width = "10%"
+                // }}
+                loop={true}
+                // autoplay={
+                //     {
+                //         delay: 2500,
+                //         disableOnInteraction: true
+                //     }
+                // }
+                modules={[Autoplay]}
+            >
+                <SwiperSlide>
+                    <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
+                        <img src="sp2.png" className='absolute top-0 left-0 min-w-full min-h-full '/>
+
+                        <div className="spotcard-content w-full min-h-[100%] p-12 flex flex-col justify-between z-10 text-white font-[Poppins]">
+                            <p className='text-xl font-light tracking-widest'>UPCOMING EVENT</p>
+                            <div className='flex flex-col'>
+                                <p className='text-3xl font-semibold mb-1'>Technofete'1
+                            
+                                </p>
+                                <p className='text-xl font-light text-gray-300'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With n the world.</p>
+                                <a href="/" className='mt-1 text-white no-underline underline decoration-dotted flex gap-1 text-xl'>
+                                    Learn more
+                                    <img src="chevron-forward-outline.svg" alt="" className='w-[10.5px] hover:translate-x-2 transition'/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
+                        <img src="sp2.png" className='absolute top-0 left-0 min-w-full min-h-full '/>
+
+                        <div className="spotcard-content w-full min-h-[100%] p-12 flex flex-col justify-between z-10 text-white font-[Poppins]">
+                            <p className='text-xl font-light tracking-widest'>UPCOMING EVENT</p>
+                            <div className='flex flex-col'>
+                                <p className='text-3xl font-semibold mb-1'>Technofete'2</p>
+                                <p className='text-xl font-light text-gray-300'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With n the world.</p>
+                                <a href="/" className='mt-1 text-white no-underline underline decoration-dotted flex gap-1 text-xl'>
+                                    Learn more
+                                    <img src="chevron-forward-outline.svg" alt="" className='w-[10.5px] hover:translate-x-2 transition'/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
+                        <img src="sp2.png" className='absolute top-0 left-0 min-w-full min-h-full '/>
+
+                        <div className="spotcard-content w-full min-h-[100%] p-12 flex flex-col justify-between z-10 text-white font-[Poppins]">
+                            <p className='text-xl font-light tracking-widest'>UPCOMING EVENT</p>
+                            <div className='flex flex-col'>
+                                <p className='text-3xl font-semibold mb-1'>Technofete'3
+
+                                </p>
+                                <p className='text-xl font-light text-gray-300'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With n the world.</p>
+                                <a href="/" className='mt-1 text-white no-underline underline decoration-dotted flex gap-1 text-xl'>
+                                    Learn more
+                                    <img src="chevron-forward-outline.svg" alt="" className='w-[10.5px] hover:translate-x-2 transition'/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
+                        <img src="sp2.png" className='absolute top-0 left-0 min-w-full min-h-full '/>
+
+                        <div className="spotcard-content w-full min-h-[100%] p-12 flex flex-col justify-between z-10 text-white font-[Poppins]">
+                            <p className='text-xl font-light tracking-widest'>UPCOMING EVENT</p>
+                            <div className='flex flex-col'>
+                                <p className='text-3xl font-semibold mb-1'>Technofete'4</p>
+                                <p className='text-xl font-light text-gray-300'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With n the world.</p>
+                                <a href="/" className='mt-1 text-white no-underline underline decoration-dotted flex gap-1 text-xl'>
+                                    Learn more
+                                    <img src="chevron-forward-outline.svg" alt="" className='w-[10.5px] hover:translate-x-2 transition'/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
+                        <img src="sp2.png" className='absolute top-0 left-0 min-w-full min-h-full '/>
+
+                        <div className="spotcard-content w-full min-h-[100%] p-12 flex flex-col justify-between z-10 text-white font-[Poppins]">
+                            <p className='text-xl font-light tracking-widest'>UPCOMING EVENT</p>
+                            <div className='flex flex-col'>
+                                <p className='text-3xl font-semibold mb-1'>Technofete'5</p>
+                                <p className='text-xl font-light text-gray-300'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With n the world.</p>
+                                <a href="/" className='mt-1 text-white no-underline underline decoration-dotted flex gap-1 text-xl'>
+                                    Learn more
+                                    <img src="chevron-forward-outline.svg" alt="" className='w-[10.5px] hover:translate-x-2 transition'/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="flex min-w-[50%] h-[300px] flex-col rounded-xl relative min-h-[300px] spotimg-overlay overflow-hidden">
+                        <img src="sp2.png" className='absolute top-0 left-0 min-w-full min-h-full '/>
+
+                        <div className="spotcard-content w-full min-h-[100%] p-12 flex flex-col justify-between z-10 text-white font-[Poppins]">
+                            <p className='text-xl font-light tracking-widest'>UPCOMING EVENT</p>
+                            <div className='flex flex-col'>
+                                <p className='text-3xl font-semibold mb-1'>Technofete'6S</p>
+                                <p className='text-xl font-light text-gray-300'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission. With n the world.</p>
+                                <a href="/" className='mt-1 text-white no-underline underline decoration-dotted flex gap-1 text-xl'>
+                                    Learn more
+                                    <img src="chevron-forward-outline.svg" alt="" className='w-[10.5px] hover:translate-x-2 transition'/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+
+            </div>
+            </div>
+            </div>
+        
         
         {/* Unwilling our vision and  mission */}
         <ScrollTrigger onEnter={()=> setCountTrigger(true)} onExit={()=> setCountTrigger(false)} >
@@ -149,7 +291,7 @@ export const Home = () => {
                                         </CountUp>}+</h1>
                                 <h4>Students project has been funded for patent</h4>
                             </div>
-                            <div class="hrline"></div>
+                            <div className="hrline"></div>
                             <div className="right_box_count">
                                 <h1>{ countTrigger &&
                                         <CountUp   start={0}
