@@ -21,7 +21,7 @@ export const Navbar = () => {
     <p className="text-base mb-0 text-gray-500 font-[Poppins] md:hidden">Dr.Mahalingam College of Engineering & Technology</p>
     <div className="nav_logo flex items-center gap-2 md:gap-3 font-[Poppins] z-40">
         <img src="mcetlogo.png" alt="logo" className="w-19 h-10 md:w-26 md:h-18 " />
-        <span className="w-[1px] h-[50%] bg-gray-300 rounded-md"></span>
+        <span className="w-[1px] h-[30px] bg-gray-300 rounded-md"></span>
         <div className="flex items-center gap-3">
           <img src="srclogo.png" alt="logo" className="logo w-12 md:w-19  " />
           <div className="flex flex-col justify-center">

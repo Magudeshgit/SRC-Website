@@ -388,49 +388,13 @@ export const Home = () => {
             {/* Facilities */}
 
             <div className="facilities mt-5">
-                <h2>Facilities</h2>
-                <div className="row facilities_conatiner mt-5 linear_opacity">
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 " style={{padding:0}}>
-                        <img src="Seedfunding.svg" alt="Seed funding" className='facilities_img' />
-                    </div>
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6  facilities_right">
-                        <p className=' firstP'>FUNDING</p>
-                        <h3>Seed Funding</h3>
-                        <p className='secondP'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission With an of knowledge, push boundaries.</p>
-                        <div className='submit mt-5 mb-3'>
-                            <a href="#">Submit proposal <FaArrowRight/> </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row facilities_conatiner mt-5">
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 " style={{padding:0}}>
-                        <img src="product.svg" alt="Seed funding" className='facilities_img ' />
-                    </div>
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6  facilities_right">
-                        <p className=' firstP'>FUNDING</p>
-                        <h3>Project Identification</h3>
-                        <p className='secondP'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission With an of knowledge, push boundaries.</p>
-                        <div className='submit mt-5 mb-3'>
-                            <a href="#">Submit proposal <FaArrowRight/> </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row facilities_conatiner mt-5">
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 " style={{padding:0}}>
-                        <img src="resource.svg" alt="Seed funding" className='facilities_img ' />
-                    </div>
-                    <div className="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6  facilities_right">
-                        <p className=' firstP'>GUIDANCE</p>
-                        <h3>Resource Allocation</h3>
-                        <p className='secondP'>Fostering a dynamic community of student researchers committed to driving innovation and positive change through their collaborative, ethical, and impactful research endeavors is the cornerstone of our mission With an of knowledge, push boundaries.</p>
-                        <div className='submit mt-5 mb-3'>
-                            <a href="#">Submit proposal <FaArrowRight/> </a>
-                        </div>
-                    </div>
-                </div>
+                <h2 className='font-[Poppins]'>Facilities</h2>
                 
+                <div className="fac-wrap">
+                    <div className="fac-card p-6 border border-b border-black rounded-lg max-w-[350px]">
+                        something
+                    </div>
+                </div>
             </div>
 
 
